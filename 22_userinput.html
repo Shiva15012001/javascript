@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userInput</title>
+    <script>
+        function userInput(){
+            let inp = document.getElementById("name").value
+            document.getElementById("head").innerHTML =inp
+            return false
+        }
+
+        //  function userInput(){
+        //     let inp = document.form1.uname.value
+        //     document.getElementById("head").innerHTML =inp
+        //     return false
+        //  }
+    </script>
+</head>
+<body>
+    <form action="#" name="form1">
+        <label for="">Enter Your Name</label>
+        <input type="text" name="uname" id="name">
+
+        <button onclick="return userInput()">click here</button>
+    </form>
+    <h1 id="head"></h1>
+</body>
+</html>
