@@ -4,16 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>open close</title>
+    <title>history object</title>
     <script>
-      var links =
-        "https://w3layouts.com/template/easy-cash-a-net-banking-website-template/";
-      let win;
-      function open_fn() {
-        win = window.open(links);
+      function go_fn() {
+        history.go(-3);
       }
-      function close_fn() {
-        win = close();
+      function back_fn() {
+        history.back();
       }
       function forward_fn() {
         history.forward();
@@ -21,8 +18,9 @@
     </script>
   </head>
   <body>
-    <button onclick="return open_fn()">open click</button>
-    <button onclick="return close_fn()">close click</button>
+    <!-- go(),back(),forward() -->
+    <button onclick="return  go_fn()">Go</button>
+    <button onclick="return  back_fn()">back</button>
     <button onclick="return forward_fn()">forward</button>
   </body>
 </html>

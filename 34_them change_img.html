@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>theme changing img</title>
+    <style>
+      a {
+        text-decoration: none;
+        color: brown;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      .dark-mode {
+        background-color: aqua;
+        color: bisque;
+      }
+      .dark-mode a {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img1.jpg" alt="" />
+    <h1>ayyapppa swami</h1>
+    <a href="">navya dasari</a>
+    <script>
+      let icon = document.querySelector("#icon");
+      icon.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mood");
+        if (document.body.classList.contains("dark-mood") == ture) {
+          icon.src = "img2";
+        } else {
+          icon.src = "img1";
+        }
+      });
+    </script>
+  </body>
+</html>
