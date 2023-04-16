@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile validation</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+    <script>
+        function check_fn(){
+            let fname = document.getElementById("f_name").value
+            if(fname == ""){
+                document.getElementById("msg").innerHTML="enter name"
+                return false
+            }
+        }
+        function reg_ex_fn(){
+            let fname =document.getElementById("f_name").value
+            let name_reg_ex = /^[a-zA-Z]*$/
+            if(name_reg_ex.test(fname)){
+                document.getElementById("msg").innerHTML=""
+                return false
+            }else{
+                document.getElementById("msg").innerHTML="NUMBERS NOT ALLOWED"
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="form1">
+        <label for="">Enter your name</label>
+        <input type="text" name="fname" id="f_name" onkeyup="return reg_ex_fn()">
+        <span id="msg"></span>
+        <br><br>
+        <button type="submit" onclick="return check_fn()">Click Here</button>
+    </form>
+</body>
+</html>
