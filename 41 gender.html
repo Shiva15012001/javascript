@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender</title>
+    <style> 
+        span{
+            color: crimson;
+        }
+    </style>
+    <script>
+        function check_gen(){
+            let male =document.getElementById("male").checked;
+            let female = document.getElementById("female").checked;
+            if(male == false && female == false){
+                document.getElementById("msg").innerHTML="slelect gender"
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="form1">
+        <label for="">Gender</label>
+        <input type="radio" name="gen" id="male">male
+        <input type="radio" name="gen" id="female">female
+        <span id="msg"></span>
+        <br><br>
+        <button type="submit" onclick="return check_gen()">clcik here</button>
+    </form>
+</body>
+</html>

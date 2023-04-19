@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <style>
+        span{
+            color: red;
+            font-size: 18px;
+        }
+    </style> 
+    <script>
+       function checkbox(){
+        let c1 =document.getElementById("c1").checked;
+        let c2 = document.getElementById("c2").checked
+        let c3 = document.getElementById("c3").checked
+        if(c1 == false && c2 == false & c3 == false){
+            document.getElementById("msg").innerText = "select hobbies"
+            return false
+        }
+       }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="form1">
+        <label for="">Hobbies</label>
+        <input type="checkbox" name="" id="c1">playing
+        <input type="checkbox" name="" id="c2">dancing
+        <input type="checkbox" name="" id="c3">reading
+        <span id="msg"></span>
+        <br><br>
+        <button type="submit" onclick="return checkbox()">click here</button>
+    </form>
+</body>
+</html>

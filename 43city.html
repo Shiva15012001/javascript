@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City</title>
+    <style>
+        span{
+            color: purple;
+        }
+    </style>
+    <script>
+      function selec(){
+        
+        let city =document.getElementById("city").value
+        if(city == -1){
+            document.getElementById("msg").innerHTML="select cities"
+            return false
+        }
+      }
+    </script>
+</head>
+<body>
+    <form action="#" method="get" name="form1">
+        <label for="">City</label>
+        <select name="city" id="city">
+            <option value="-1">-----select----</option>
+            <option value="">surat</option>
+            <option value="">telanga</option>
+        </select>
+        <span id="msg"></span>
+        <br><br>
+        <button type="submit" onclick="return selec()">click here</button>
+    </form>
+</body>
+</html>
